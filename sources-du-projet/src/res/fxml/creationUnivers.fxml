@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="700.0" spacing="10.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.univlille.modelisation.controllers.FenetreUnivers">
+   <children>
+      <Label fx:id="txtError" minHeight="-Infinity" minWidth="-Infinity">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label minHeight="-Infinity" minWidth="-Infinity" text="Paramètres Univers">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" spacing="5.0">
+         <children>
+            <Label text="G :" />
+            <TextField fx:id="g" prefWidth="40.0" />
+            <Label text="Dt :" />
+            <TextField fx:id="dt" prefWidth="40.0" />
+            <Label text="Fa :" />
+            <TextField fx:id="fa" prefWidth="40.0" />
+            <Label text="Rayon :" />
+            <TextField fx:id="rayon" prefWidth="40.0" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <Separator prefWidth="200.0" />
+      <Label minHeight="-Infinity" minWidth="-Infinity" text="Paramètres Planète">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" spacing="5.0">
+         <children>
+            <Label text="Type Astre :" />
+            <ChoiceBox fx:id="choiceBox" prefWidth="100.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" spacing="5.0">
+         <children>
+            <Label text="Nom :" />
+            <TextField fx:id="nom" prefWidth="40.0" />
+            <Label text="Masse :" />
+            <TextField fx:id="masse" prefWidth="40.0" />
+            <Label text="Pos X :" />
+            <TextField fx:id="posX" prefWidth="40.0" />
+            <Label text="Pos Y :" />
+            <TextField fx:id="posY" prefWidth="40.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="hVitesse" alignment="CENTER" disable="true" spacing="5.0">
+         <children>
+            <Label text="Vitesse X :" />
+            <TextField fx:id="vitX" prefWidth="40.0" />
+            <Label text="Vitesse Y :" />
+            <TextField fx:id="vitY" prefWidth="40.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="hEllipse" alignment="CENTER" disable="true" spacing="5.0">
+         <children>
+            <Label text="Foyer 1 :" />
+            <ChoiceBox fx:id="foyer1" prefWidth="100.0" />
+            <Label text="Foyer 2 :" />
+            <ChoiceBox fx:id="foyer2" prefWidth="100.0" />
+            <Label text="Période :" />
+            <TextField fx:id="periodeEllipse" prefWidth="40.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="hCercle" alignment="CENTER" disable="true" spacing="5.0">
+         <children>
+            <Label text="Centre :" />
+            <ChoiceBox fx:id="choiceAstre" prefWidth="100.0" />
+            <Label text="Période :" />
+            <TextField fx:id="periodeCercle" prefWidth="40.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="hVaisseau" alignment="CENTER" disable="true" spacing="5.0">
+         <children>
+            <Label text="PPprincipal :" />
+            <TextField fx:id="ppPrincipal" prefWidth="40.0" />
+            <Label text="PPretro :" />
+            <TextField fx:id="ppRetro" prefWidth="40.0" />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#ajout" text="Ajout" />
+      <Separator prefWidth="200.0" />
+      <TableView fx:id="tableView" />
+      <HBox alignment="CENTER" spacing="5.0">
+         <children>
+            <Label text="Chemin :" />
+            <TextField fx:id="chemin" />
+            <Button fx:id="save" mnemonicParsing="false" text="Sauvegarder" />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#apply" text="Ok" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

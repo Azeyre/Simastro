@@ -1,0 +1,13 @@
+# Un corps léger utilise la masse du soleil pour accélérer
+PARAMS G=0.01 dt=0.025 fa=1 rayon=500
+Soleil: Fixe masse=40 posx=0 posy=0
+Juan: Fixe masse=40 posx=170 posy=75
+Pedro: Fixe masse=0.01 posx=20 posy=620
+Terre: Simulé masse=0.01 posx=200.0 posy=190.0 vx=0.0 vy=0.07
+Saturne: Simulé masse=0.01 posx=-100.0 posy=-100.0 vx=0.07 vy=0.0
+El: Ellipse masse=100 posx=150 posy=90 premfoyer=Soleil deuxfoyer=Juan periode=80000
+Satellite: Cercle masse=10 posx=170 posy=100 centre=Terre periode=20000
+C: Cercle masse=40 posx=600.0 posy=600.0 centre=Pedro periode=60000
+Cercle: Cercle masse=40 posx=600.0 posy=600.0 centre=C periode=20000
+Ce: Cercle masse=40000 posx=700.0 posy=700.0 centre=Cercle periode=10000
+V: Vaisseau masse=0.001 posx=75 posy=333 vitx=0 vity=0.017 pprincipal=0.0001 pretro=0.0000001
